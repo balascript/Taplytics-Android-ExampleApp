@@ -24,7 +24,7 @@ android {
     }
 }
 repositories {
-    maven { url 'http://vicvu.com/testing' }
+    maven { url 'https://github.com/taplytics/Taplytics-Android-SDK/raw/master/AndroidStudio/' }
 }
 
 
