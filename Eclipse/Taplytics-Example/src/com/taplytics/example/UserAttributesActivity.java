@@ -1,14 +1,14 @@
 package com.taplytics.example;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.taplytics.sdk.Taplytics;
-
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
+
+import com.taplytics.sdk.Taplytics;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * In this activity, we send some basic user attributes to taplytics.
@@ -34,7 +34,7 @@ public class UserAttributesActivity extends ActionBarActivity {
 			attributes.put("email", "example_email_address@taplytics.com");
 			attributes.put("name", "exampleName");
 			attributes.put("age", 100);
-			attributes.put("customData", "paying_customer");
+			attributes.put("customData", new JSONObject());
 		} catch (JSONException e) {
 			// Do something with a json error..
 		}

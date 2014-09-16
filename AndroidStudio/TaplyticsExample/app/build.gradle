@@ -36,3 +36,24 @@ dependencies {
         transitive = true
     }
 }
+
+/**
+ * Run this to copy all of the sources of the project from this project into the Eclipse project.
+ */
+task copySources(type: Copy) {
+    from('src/main/java/com')
+    into('../../../Eclipse/Taplytics-Example/src/com')
+}
+
+task copyManifest(type: Copy) {
+    from('src/main/')
+    into('../../../Eclipse/Taplytics-Example/')
+    include('AndroidManifest.xml')
+}
+
+task clearSources(type: Delete) {
+    delete '../../../Eclipse/Taplytics-Example/src/'
+    delete '../../../Eclipse/Taplytics-Example/AndroidManifest.xml'
+}
+
+copySources.dependsOn(clearSources, copyManifest)

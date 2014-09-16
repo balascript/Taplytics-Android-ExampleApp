@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.taplytics.example.R;
 
+
 public class CustomFontsButton extends Button {
 
 	public CustomFontsButton(Context context, AttributeSet attrs, int defStyle) {
