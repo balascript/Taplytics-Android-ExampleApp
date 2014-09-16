@@ -24,9 +24,7 @@ android {
     }
 }
 repositories {
-    maven {
-        url 'https://github.com/taplytics/Taplytics-Android-SDK/raw/master/AndroidStudio/'
-    }
+    maven { url 'https://github.com/taplytics/Taplytics-Android-SDK/raw/master/AndroidStudio/' }
 }
 
 
