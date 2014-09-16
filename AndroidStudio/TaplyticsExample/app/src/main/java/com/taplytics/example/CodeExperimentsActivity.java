@@ -1,5 +1,7 @@
 package com.taplytics.example;
 
+import java.util.Map;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,8 +15,6 @@ import android.widget.Button;
 
 import com.taplytics.sdk.Taplytics;
 import com.taplytics.sdk.TaplyticsCodeExperimentListener;
-
-import java.util.Map;
 
 /**
  * This Activity contains an example of a code block experiment.
