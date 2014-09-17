@@ -51,9 +51,15 @@ task copyManifest(type: Copy) {
     include('AndroidManifest.xml')
 }
 
-task clearSources(type: Delete) {
+task clearOld(type: Delete) {
     delete '../../../Eclipse/Taplytics-Example/src/'
     delete '../../../Eclipse/Taplytics-Example/AndroidManifest.xml'
+    delete '../../../Eclipse/Taplytics-Example/res'
 }
 
-copySources.dependsOn(clearSources, copyManifest)
+task copyResources(type: Copy) {
+    from('src/main/res')
+    into('../../../Eclipse/Taplytics-Example/res')
+}
+
+copySources.dependsOn(clearOld, copyManifest, copyResources)
