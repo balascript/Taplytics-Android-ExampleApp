@@ -5,11 +5,11 @@
     android:layout_height="fill_parent"
     android:background="@drawable/bg"
     android:paddingBottom="10dp"
-    tools:context="com.taplytics.example.MainActivity">
+    tools:context="com.taplytics.example.MainActivity" >
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
 
         <ImageView
             android:id="@+id/imageView1"
@@ -46,7 +46,8 @@
             android:layout_marginTop="25dp"
             android:background="@color/grey"
             android:orientation="vertical"
-            android:visibility="invisible"></LinearLayout>
+            android:visibility="invisible" >
+        </LinearLayout>
 
         <com.taplytics.example.views.CustomFontsTextView
             android:id="@+id/source_explanation"
@@ -56,18 +57,31 @@
             android:layout_centerInParent="true"
             android:gravity="center"
             android:lineSpacingExtra="2dp"
-            android:text="View the source code for each example to see how to use Taplytics."
+            android:text="@string/view_the_source_code_for_each_example_to_see_how_to_use_taplytics_"
             android:textColor="@color/grey"
             android:textSize="11sp"
+            app:fontName="avenir.ttf" />
+
+        <com.taplytics.example.views.CustomFontsButton
+            android:id="@+id/visual_editor_button"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/source_explanation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/transparent_button_state"
+            android:text="@string/visual_experiments_button_text"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
             app:fontName="avenir.ttf" />
 
         <com.taplytics.example.views.CustomFontsButton
             android:id="@+id/code_experiments_button"
             android:layout_width="260dp"
             android:layout_height="40dp"
-            android:layout_below="@id/source_explanation"
+            android:layout_below="@id/visual_editor_button"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/transparent_button_state"
             android:text="@string/code_experiments_button_text"
             android:textColor="@color/grey"

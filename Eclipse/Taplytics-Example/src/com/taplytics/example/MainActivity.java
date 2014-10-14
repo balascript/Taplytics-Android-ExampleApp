@@ -18,6 +18,7 @@ public class MainActivity extends ActionBarActivity {
 		((Button) findViewById(R.id.code_experiments_button)).setOnClickListener(getOnClickListener(this, CodeExperimentsActivity.class));
 		((Button) findViewById(R.id.user_information_button)).setOnClickListener(getOnClickListener(this, UserAttributesActivity.class));
 		((Button) findViewById(R.id.events_button)).setOnClickListener(getOnClickListener(this, EventsActivity.class));
+		((Button) findViewById(R.id.visual_editor_button)).setOnClickListener(getOnClickListener(this, VisualActivity.class));
 
 	}
 
