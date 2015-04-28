@@ -25,4 +25,11 @@
     <string name="event_action">Give it a try, pressing the button will track a button press event, with the number of times its been pressed this session on this screen. </string>
     <string name="send_an_event">send an event</string>
 
+
+    <!-- Visual Experiments -->
+    <string name="visual_experiments_button_text">VISUAL EXPERIMENTS</string>
+    <string name="visual_experiment_text">Taplytics allows you to A/B test your app without writing a single line of code using visual experiments.</string>
+    <string name="visual_experiment_action">Give it a try. On your Taplytics dashboard, click "add element to variation", and then click an element on the app. \n\nFrom the dashboard, edit the settings on the view, select that variation, and check out your updates live!</string>
+
+
 </resources>

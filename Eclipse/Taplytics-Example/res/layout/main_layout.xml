@@ -119,6 +119,19 @@
                 android:textColor="@color/grey"
                 android:textSize="12sp"
                 app:fontName="avenir.ttf"/>
+
+            <com.taplytics.example.views.CustomFontsButton
+                android:id="@+id/visual_editor_button"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/user_information_button"
+                android:layout_below="@+id/events_button"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/transparent_button_state"
+                android:text="@string/visual_experiments_button_text"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:fontName="avenir.ttf"/>
         </RelativeLayout>
 
     </ScrollView>
