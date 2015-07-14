@@ -35,7 +35,7 @@ public class EventsActivity extends AppCompatActivity {
         // You can also attach optional metaData. Here we'll put something like 'subscriber' as an example.
         final JSONObject eventMetaData = new JSONObject();
         try {
-            eventMetaData.put("subsrciber", false);
+            eventMetaData.put("subscriber", false);
         } catch (JSONException e) {
             // Do something with json exception
         }

@@ -46,6 +46,7 @@ dependencies {
         exclude group: 'org.json'
     }
 
+    compile("com.android.support:appcompat-v7:22.2.0");
 }
 
 /**
