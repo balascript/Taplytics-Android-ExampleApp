@@ -32,21 +32,18 @@ repositories {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
-//Taplytics
+
+    // Taplytics
     compile('com.taplytics.sdk:taplytics:+@aar')
 
-//Taplytics Dependencies
+    // Taplytics Dependencies
     compile("com.mcxiaoke.volley:library:+")
 
-//Note: socket connections are only always on in debug builds.
-    compile("com.github.nkzawa:socket.io-client:+") {
-        exclude group: 'org.json'
-    }
-    compile("com.github.nkzawa:engine.io-client:+") {
-        exclude group: 'org.json'
+    // Note: socket connections are only always on in debug builds.
+    compile('io.socket:socket.io-client:+') {
+        exclude group: 'org.json', module: 'json' // included in Android
     }
 
-    compile("com.android.support:appcompat-v7:22.2.0");
 }
 
 /**
