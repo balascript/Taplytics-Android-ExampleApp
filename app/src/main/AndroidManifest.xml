@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.taplytics.example"
-    android:versionCode="1"
-    android:versionName="1.0">
+    package="com.taplytics.example">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="21" />
 
     <application
         android:name=".ExampleApplication"
@@ -46,6 +40,14 @@
         </activity>
         <activity
             android:name=".EventsActivity"
+            android:label=""
+            android:theme="@style/MyTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".VisualActivity"
             android:label=""
             android:theme="@style/MyTheme">
             <meta-data
