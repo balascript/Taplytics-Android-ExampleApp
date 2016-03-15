@@ -7,4 +7,4 @@ Check out the Android SDK for installation instructions: https://github.com/tapl
 
 You must have Android SDK 22 installed. 
 
-For Android Studio, be sure to import the AndroidStudio/Taplytics-ExampleApp directory, and not the higher level directories. 
+
