@@ -9,11 +9,19 @@
     <string name="in_action_text">In action.</string>
     <string name="events_button_text">EVENTS</string>
 
-    <!-- Code Experiments -->
-    <string name="code_experiment_text">Taplytics offers code-based experiments, which allow you to A/B test nearly anything within your app. From game variables, to small text changes.</string>
-    <string name="code_experiment_action">Give it a try, the following dialog is modified with a code experiment. \nYou can simply shake the device to see a menu with experiments and variations. </string>
-    <string name="code_experiments_button_text">CODE EXPERIMENTS</string>
+    <!-- Dynamic Variables -->
+    <string name="dynamic_variable_text">Taplytics offers variables that can be modified from the Taplytics Dashboard.</string>
+    <string name="dynamic_variable_action">Give it a try. If you have entered your API key in the Application class, you can make a new experiment on the Taplytics Dashboard. You should see this new variable there in the dynamic variables tab! Change it\'s value, and use the shake menu to switch variations. \n\n If you don\'t see it in the dashboard, create a variable by the same name!</string>
+    <string name="dynamic_variable_button_text">DYNAMIC VARIABLES</string>
     <string name="check_it_out">check it out</string>
+
+
+    <!-- Code Bloks -->
+    <string name="code_block_text">With Taplytics, you can create blocks of code that run or do not run based on the variation!</string>
+    <string name="code_block_action">Give it a try. If you have entered your API key in the Application class, you can make a new experiment on the Taplytics Dashboard. You should see this new code block there in the dynamic variables tab! Change whether or not it should run, then shake the phone to switch variations! When it runs, the button below should disappear.  \n\n If you don\'t see it in the dashboard, create a variable by the same name!</string>
+    <string name="code_block_button_text">CODE BLOCKS</string>
+    <string name="code_block_button">check it out</string>
+
 
     <!-- User Attributes -->
     <string name="user_attributes_button_text">USER ATTRIBUTES</string>

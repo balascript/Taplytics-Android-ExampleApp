@@ -6,8 +6,8 @@
     android:background="@drawable/bg"
     tools:context="com.taplytics.example.MainActivity">
 
-    <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transparent"
@@ -78,14 +78,27 @@
                 app:fontName="avenir.ttf" />
 
             <com.taplytics.example.views.CustomFontsButton
-                android:id="@+id/code_experiments_button"
+                android:id="@+id/dynamic_variables_button"
                 android:layout_width="260dp"
                 android:layout_height="40dp"
                 android:layout_below="@id/source_explanation"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/transparent_button_state"
-                android:text="@string/code_experiments_button_text"
+                android:text="@string/dynamic_variable_button_text"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:fontName="avenir.ttf" />
+
+            <com.taplytics.example.views.CustomFontsButton
+                android:id="@+id/code_blocks_button"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/dynamic_variables_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/transparent_button_state"
+                android:text="@string/code_block_button_text"
                 android:textColor="@color/grey"
                 android:textSize="12sp"
                 app:fontName="avenir.ttf" />
@@ -94,8 +107,8 @@
                 android:id="@+id/user_information_button"
                 android:layout_width="260dp"
                 android:layout_height="40dp"
-                android:layout_alignLeft="@+id/code_experiments_button"
-                android:layout_below="@+id/code_experiments_button"
+                android:layout_alignLeft="@+id/code_blocks_button"
+                android:layout_below="@+id/code_blocks_button"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/transparent_button_state"
                 android:text="@string/user_attributes_button_text"

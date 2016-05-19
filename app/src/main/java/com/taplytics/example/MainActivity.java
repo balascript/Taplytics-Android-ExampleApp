@@ -15,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-        findViewById(R.id.code_experiments_button).setOnClickListener(getOnClickListener(this, CodeExperimentsActivity.class));
+        findViewById(R.id.dynamic_variables_button).setOnClickListener(getOnClickListener(this, DynamicVariablesActivity.class));
         findViewById(R.id.user_information_button).setOnClickListener(getOnClickListener(this, UserAttributesActivity.class));
         findViewById(R.id.events_button).setOnClickListener(getOnClickListener(this, EventsActivity.class));
         findViewById(R.id.visual_editor_button).setOnClickListener(getOnClickListener(this, VisualActivity.class));
+        findViewById(R.id.code_blocks_button).setOnClickListener(getOnClickListener(this, CodeBlockActivity.class));
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -37,7 +37,7 @@ dependencies {
     compile('com.taplytics.sdk:taplytics:+@aar')
 
     // Taplytics Dependencies
-    compile("com.mcxiaoke.volley:library:+")
+    compile 'com.android.volley:volley:1.0.0'
 
     // Note: socket connections are only always on in debug builds.
     compile('io.socket:socket.io-client:+') {

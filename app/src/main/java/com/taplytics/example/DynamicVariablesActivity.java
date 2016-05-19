@@ -10,10 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.taplytics.sdk.Taplytics;
-import com.taplytics.sdk.TaplyticsCodeExperimentListener;
-
-import java.util.Map;
+import com.taplytics.sdk.TaplyticsVar;
+import com.taplytics.sdk.TaplyticsVarListener;
 
 /**
  * This Activity contains an example of a code block experiment.
@@ -24,7 +22,7 @@ import java.util.Map;
  *
  * @author vicv
  */
-public class CodeExperimentsActivity extends AppCompatActivity {
+public class DynamicVariablesActivity extends AppCompatActivity {
 
     /**
      * The popup dialog text. Default it to the baseline variation *
@@ -34,7 +32,7 @@ public class CodeExperimentsActivity extends AppCompatActivity {
     /**
      * The popup dialog title. Default it to the baseline variation *
      */
-    private String DIALOG_TITLE = "Baseline";
+    private String DIALOG_TITLE = "The below text can be modified on the Taplytics Dashboard";
 
     private Context context = this;
 
@@ -49,41 +47,17 @@ public class CodeExperimentsActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        // Run this code experiment. This triggers the experiment.
-        runAnExperiment();
+        TaplyticsVar<String> dialogTextVar = new TaplyticsVar<>("example var", "This is the default value", new TaplyticsVarListener() {
+            @Override
+            public void variableUpdated(Object o) {
+                DIALOG_TEXT = (String) o;
+            }
+        });
+
+        DIALOG_TEXT = dialogTextVar.get();
 
         // Make a popup when the button is clicked
         findViewById(R.id.code_experiment_dialog_button).setOnClickListener(dialogPopupClickListener());
-    }
-
-    /**
-     * Run the experiment! This notifies taplytics that an experiment is running. The experiment listener checks to see if the experiment
-     * has been updated, and it will re-instantiate the experiment with the new information if it has.
-     */
-    public void runAnExperiment() {
-        Taplytics.runCodeExperiment("Code Experiment", new TaplyticsCodeExperimentListener() {
-
-            // We have received a variation of this experiment! In this case, we change our text and title to the received variables.
-            @Override
-            public void experimentVariation(String variationName, Map<String, Object> variables) {
-                DIALOG_TEXT = (String) variables.get("Dialog Text");
-                DIALOG_TITLE = variationName;
-            }
-
-            @Override
-            public void experimentUpdated() {
-                runAnExperiment();
-            }
-
-            // We have recieved the baseline variation! In this case, we change our text and title to the original, baseline variables (also
-            // contained in the map).
-            @Override
-            public void baselineVariation(Map<String, Object> variables) {
-                DIALOG_TEXT = "This is the Baseline variation!";
-                DIALOG_TITLE = "Baseline";
-
-            }
-        });
     }
 
     /**

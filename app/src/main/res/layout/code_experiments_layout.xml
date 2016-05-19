@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@android:color/white"
     android:paddingBottom="10dp"
-    tools:context="com.taplytics.example.CodeExperimentsActivity">
+    tools:context=".DynamicVariablesActivity">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -35,7 +35,7 @@
                 android:layout_marginTop="12dp"
                 android:gravity="center"
                 android:paddingTop="30dp"
-                android:text="@string/code_experiments_button_text"
+                android:text="@string/dynamic_variable_button_text"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
                 app:fontName="avenir_bold.ttf" />
@@ -76,7 +76,7 @@
                 android:lineSpacingExtra="2dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="@string/code_experiment_text"
+                android:text="@string/dynamic_variable_text"
                 android:textColor="@color/text_grey"
                 android:textSize="15sp"
                 app:fontName="avenir.ttf" />
@@ -104,7 +104,7 @@
                 android:lineSpacingExtra="2dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="@string/code_experiment_action"
+                android:text="@string/dynamic_variable_action"
                 android:textColor="@color/text_grey"
                 android:textSize="15sp"
                 app:fontName="avenir.ttf" />
